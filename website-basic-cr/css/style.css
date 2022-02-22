@@ -1,0 +1,278 @@
+/* Variables */
+:root {
+    --primary-color: #f99500;
+    --light-color: #f3f3f3;
+    --dark: #333;
+    --gray: #555;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    background: var(--light-color);
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+p {
+    margin: 0.75rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Top Bar */
+#top-bar {
+    background: var(--light-color);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.294);
+}
+
+#top-bar .container {
+    display: grid;
+    grid-template-columns: 6fr 0.7fr 1fr;
+    padding: 0 0.5rem;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    color: var(--light-color);
+    padding: 0.5rem 1.5rem;
+    width: max-content;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+}
+
+.btn-outlined {
+    padding: .5rem;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.btn-outlined:hover {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+.py-1 {
+    padding: 2rem 0;
+}
+.py-2 {
+    padding: 2rem 0;
+}
+.py-3 {
+    padding: 2rem 0;
+}
+.py-4 {
+    padding: 2rem 0;
+}
+
+#top-bar .logo {
+    width: 150px;
+}
+
+/* Hero */
+#hero {
+    color: var(--light-color);
+    background: black;
+    padding: 2rem;
+    position: relative;
+}
+
+#hero:before {
+    content: '';
+    background: url('../img/hero.png') no-repeat center 80% / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+#hero .hero-container {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#hero .hero-content {
+    z-index: 1;
+}
+
+
+/* Job Categories */
+#job-categories .categories-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+#job-categories .categories-container .card {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+
+#job-categories .categories-container .card h3 {
+    font-size: 1rem;
+    margin: 0.5 rem 0;
+}
+
+#job-categories .categories-container .card:nth-child(even) {
+    flex-direction: column-reverse;
+}
+
+.card {
+    background: var(--white);
+    padding: 1rem;
+    box-shadow: 0 0 20px #00000078;
+    border-radius: 15px;
+    transition: all 0.6s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card.web-development {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+}
+
+.category {
+    display: inline-block;
+    color: #fff;
+    font-size: .75rem;
+    text-transform: uppercase;
+    line-height: normal;
+    padding: 0.5rem 0.7rem;
+    border-radius: 15px;
+    margin: 0.5rem 0;
+}
+
+.category-healthcare {
+    background: #43a3f7;
+}
+
+.category-finance {
+    background: #ababab;
+}
+
+.category-hardware {
+    background: #920018;
+}
+
+.category-software {
+    background: #009cff;
+}
+
+.category-cyber {
+    background: #00d9ff;
+}
+
+.category-engineering {
+    background: #fcf421;
+    color: var(--dark);
+    border: 1px solid #e1e1e1;
+}
+
+.category-weddings {
+    border: 1px solid #777;
+    color: #777;
+}
+
+.category-web-development {
+    background: var(--dark);
+}
+
+.category-fashion {
+    background: #f19ef5;
+}
+
+.category-design {
+    background: #f501d1;
+}
+
+.category-transportation {
+    background: #2bcd33;
+}
+
+/* Footer */
+#footer {
+    background: var(--dark);
+    color: #fff;
+}
+
+#footer .logo {
+    width: 230px;
+}
+
+#footer .footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+#footer input {
+    width: 90%;
+}
+
+input {
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+#footer .email {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#footer .join-now {
+    width: 90%;
+    text-align: center;
+}
+
+#footer .copyright {
+    text-align: center;
+}

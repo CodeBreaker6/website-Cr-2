@@ -1,0 +1,49 @@
+/* Top bar */
+#top-bar .container {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+#top-bar .logo {
+    justify-self: center;
+    padding: 5px 0;
+}
+
+#job-categories .categories-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 720px){
+    #hero .hero-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px){
+    #job-categories .categories-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card.web-development {
+        grid-column: span 2;
+        grid-row: unset;
+    }
+
+    #footer .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px){
+    #top-bar .container:last-child{
+        margin-right: 10px;
+    }
+    #hero .hero-content h1 {
+        font-size: 1.7rem;
+    }
+    #job-categories .categories-container {
+        grid-template-columns: 1fr;
+    }
+    .card.web-development {
+        grid-column: unset;
+    }
+}
